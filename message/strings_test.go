@@ -49,13 +49,13 @@ func (s *stringsTestSuite) TestCountSubstrings() {
 		s.Require().Equal(1, message.CountSubstrings("Hello World", "H"))
 	})
 
-	//s.T().Run("match substring count with single vary symbols", func(t *testing.T) {
-	//	s.Require().Equal(8, message.CountSubstrings("********", "*"))
-	//	s.Require().Equal(0, message.CountSubstrings("********", "**_"))
-	//	s.Require().Equal(6, message.CountSubstrings("********", "***"))
-	//	s.Require().Equal(0, message.CountSubstrings("********", "*********"))
-	//	s.Require().Equal(0, message.CountSubstrings("*-*-*-*-*", "*********"))
-	//})
+	s.T().Run("match substring count with single vary symbols", func(t *testing.T) {
+		s.Require().Equal(8, message.CountSubstrings("********", "*"))
+		s.Require().Equal(0, message.CountSubstrings("********", "**_"))
+		s.Require().Equal(6, message.CountSubstrings("********", "***"))
+		s.Require().Equal(0, message.CountSubstrings("********", "*********"))
+		s.Require().Equal(0, message.CountSubstrings("*-*-*-*-*", "*********"))
+	})
 
 	s.T().Run("match substring count with single vary strings", func(t *testing.T) {
 		s.Require().Equal(3, message.CountSubstrings("Hey man where-where-where's your cup holder?", "where"))
